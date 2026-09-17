@@ -1,1 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Electric Vehicle Market Analysis | Michael Adesanya</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #1f2937;
+            background: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            background: white;
+            padding: 90px 8%;
+        }
+
+        .hero-content {
+            max-width: 950px;
+        }
+
+        .hero-label {
+            color: #0284c7;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #475569;
+            max-width: 800px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .section-intro {
+            color: #64748b;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            max-width: 950px;
+        }
+
+        .content p {
+            color: #475569;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .project-details {
+            background: #f1f5f9;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 950px;
+        }
+
+        .detail-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .detail-card h3 {
+            color: #0284c7;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .detail-card p {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .dashboard {
+            background: white;
+        }
+
+        .dashboard-image {
+            width: 100%;
+            max-width: 1100px;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .findings {
+            background: #f1f5f9;
+        }
+
+        .finding-list,
+        .recommendation-list {
+            max-width: 900px;
+        }
+
+        .finding-list li,
+        .recommendation-list li {
+            margin-bottom: 16px;
+            color: #475569;
+            font-size: 17px;
+        }
+
+        .tools {
+            background: white;
+        }
+
+        .tool {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 9px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .limitations {
+            background: #f1f5f9;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background: #0369a1;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px 8%;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 70px 8%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Michael Adesanya</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-label">FEATURED DATA ANALYTICS PROJECT</div>
+
+                <h1>Analyzing U.S. Electric Vehicle Market Share</h1>
+
+                <p>
+                    An end-to-end analysis of U.S. vehicle registration data
+                    examining EV adoption, fuel-market composition, state-level
+                    differences, and policy implications.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-details">
+            <h2>Project Overview</h2>
+
+            <div class="detail-grid">
+
+                <div class="detail-card">
+                    <h3>Audience</h3>
+                    <p>U.S. Government Transportation Board</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Data</h3>
+                    <p>Vehicle registration data covering 50 states and Washington, D.C.</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Tools</h3>
+                    <p>Excel, MySQL / SQL, and Power BI</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content">
+            <h2>Business Context</h2>
+
+            <p>
+                The purpose of this project was to analyze the U.S. vehicle
+                market and provide insights that could support future
+                transportation planning, particularly around electric vehicle
+                adoption and charging infrastructure.
+            </p>
+
+            <p>
+                The analysis focuses on differences in vehicle composition
+                across states and examines where EV adoption is relatively
+                higher or lower.
+            </p>
+        </section>
+
+        <section class="content">
+            <h2>Key Questions</h2>
+
+            <p>1. What percentage of vehicles in each state are EVs, PHEVs, HEVs, and gasoline?</p>
+
+            <p>2. Which states have the highest EV adoption rates and which states lag?</p>
+
+            <p>3. Which alternative fuels are significant compared with niche fuel categories?</p>
+
+            <p>4. Where should policymakers investigate EV infrastructure investment based on adoption patterns and gaps in support?</p>
+
+            <p>5. How does California compare with other large states such as Texas, Florida, and New York?</p>
+        </section>
+
+        <section class="dashboard">
+            <h2>Power BI Dashboard</h2>
+
+            <p class="section-intro">
+                The dashboard summarizes the U.S. vehicle market, EV adoption,
+                alternative-fuel composition, and comparisons between major states.
+            </p>
+
+            <img
+                src="images/dashboard_overview.png"
+                alt="U.S. Electric Vehicle Market Overview Dashboard"
+                class="dashboard-image"
+            >
+
+            <br><br>
+
+            <img
+                src="images/fuel_state_analysis.png"
+                alt="U.S. Fuel and State Analysis Dashboard"
+                class="dashboard-image"
+            >
+        </section>
+
+        <section class="findings">
+            <h2>Key Findings</h2>
+
+            <ul class="finding-list">
+
+                <li>
+                    Gasoline remains the dominant vehicle fuel category, with
+                    approximately 242.87 million vehicles compared with
+                    approximately 3.56 million EVs.
+                </li>
+
+                <li>
+                    EV adoption varies substantially across states, ranging
+                    from approximately 3.41% in California to approximately
+                    0.13% in North Dakota.
+                </li>
+
+                <li>
+                    Vehicle counts and adoption rates provide different
+                    perspectives. California has the largest EV count and also
+                    has the highest EV adoption rate among the states analyzed.
+                </li>
+
+                <li>
+                    Ethanol/Flex (E85) is the largest alternative-fuel category,
+                    with approximately 20.24 million vehicles.
+                </li>
+
+                <li>
+                    California has approximately 1.26 million EVs and an EV
+                    adoption rate of 3.41%, compared with Florida at 1.37%,
+                    New York at 1.16%, and Texas at 0.89%.
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="content">
+            <h2>Recommendations</h2>
+
+            <ul class="recommendation-list">
+
+                <li>
+                    Develop a phased, long-term EV transition strategy with
+                    measurable adoption targets and periodic assessments.
+                </li>
+
+                <li>
+                    Use state-level EV adoption rates to identify locations
+                    requiring further investigation and targeted support.
+                </li>
+
+                <li>
+                    Investigate the factors limiting EV adoption in
+                    low-adoption states before designing targeted interventions.
+                </li>
+
+                <li>
+                    Study California's policies, infrastructure, incentives,
+                    and market conditions to identify approaches that may be
+                    adaptable to other states.
+                </li>
+
+                <li>
+                    Consider existing alternative-fuel adoption patterns as
+                    part of a broader transportation transition strategy.
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="tools">
+            <h2>Tools & Workflow</h2>
+
+            <p class="section-intro">
+                The project followed an end-to-end analytics workflow from
+                data preparation through analysis and visualization.
+            </p>
+
+            <span class="tool">Excel</span>
+            <span class="tool">SQL</span>
+            <span class="tool">MySQL</span>
+            <span class="tool">Power BI</span>
+            <span class="tool">Data Cleaning</span>
+            <span class="tool">Data Validation</span>
+            <span class="tool">Data Modeling</span>
+            <span class="tool">Data Visualization</span>
+        </section>
+
+        <section class="limitations">
+            <h2>Limitations & Data Gaps</h2>
+
+            <div class="content">
+
+                <p>
+                    This analysis is primarily based on vehicle-registration
+                    data. It identifies differences in EV adoption and vehicle
+                    market composition, but it does not establish the causes
+                    behind those differences.
+                </p>
+
+                <p>
+                    The dataset also does not contain charging-infrastructure
+                    data, incentives, vehicle affordability, consumer behavior,
+                    or other factors that would be needed to determine specific
+                    infrastructure requirements.
+                </p>
+
+                <p>
+                    Additional data in these areas would strengthen future
+                    analysis and allow more specific infrastructure planning.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="content">
+            <h2>Project Repository</h2>
+
+            <p>
+                Explore the complete project files, including the dataset,
+                Excel analysis, SQL queries, Power BI dashboard, and project
+                documentation.
+            </p>
+
+            <a
+                class="button"
+                href="https://github.com/Mikel44-N/US-EV-Market-Analysis"
+                target="_blank"
+            >
+                View Project on GitHub
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Michael Adesanya. Data Analyst Portfolio.</p>
+    </footer>
+
+</body>
+</html>
