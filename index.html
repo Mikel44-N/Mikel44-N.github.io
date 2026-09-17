@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Adesanya | Data Analyst</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            padding: 100px 8%;
+            background: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h2 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        .hero h2 span {
+            color: #0284c7;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #475569;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 13px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #0369a1;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #0f172a;
+        }
+
+        .about {
+            max-width: 850px;
+            color: #475569;
+            font-size: 17px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 9px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 900px;
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+        }
+
+        .project-card h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .project-card p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .hero h2 {
+                font-size: 38px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Michael Adesanya</h1>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Turning Data Into <span>Clear Decisions</span></h2>
+
+                <p>
+                    I am a Data Analyst focused on transforming complex datasets
+                    into clear, actionable insights using Excel, SQL, and Power BI.
+                </p>
+
+                <a class="button" href="#projects">
+                    View My Projects
+                </a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p class="about">
+                I am a Data Analyst with a background in Quality Control and
+                Operations. I combine analytical thinking with practical
+                business knowledge to turn raw data into reliable insights
+                that support better decision-making.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Tools</h2>
+
+            <div class="skills">
+                <span class="skill">Excel</span>
+                <span class="skill">Power Query</span>
+                <span class="skill">Power Pivot</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Power BI</span>
+                <span class="skill">Data Visualization</span>
+                <span class="skill">Data Cleaning</span>
+                <span class="skill">Data Analysis</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Project</h2>
+
+            <div class="project-card">
+                <h3>Analyzing U.S. Electric Vehicle Market Share</h3>
+
+                <p>
+                    An analysis of U.S. vehicle registration data examining
+                    EV adoption, fuel-market composition, and differences
+                    across states.
+                </p>
+
+                <a class="button"
+                   href="https://github.com/Mikel44-N/US-EV-Market-Analysis"
+                   target="_blank">
+                    View Project
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Michael Adesanya. Data Analyst Portfolio.</p>
+    </footer>
+
+</body>
+</html>
