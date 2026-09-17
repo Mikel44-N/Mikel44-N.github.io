@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Michael Adesanya | Data Analyst</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             color: #1f2937;
             background: #f8fafc;
+            line-height: 1.6;
         }
+
+        /* Navigation */
 
         header {
             background: #0f172a;
@@ -26,16 +33,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        header h1 {
-            font-size: 22px;
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 28px;
             font-size: 15px;
         }
 
@@ -43,110 +54,200 @@
             color: #38bdf8;
         }
 
+        /* Hero */
+
         .hero {
-            padding: 100px 8%;
             background: white;
+            padding: 110px 8%;
         }
 
         .hero-content {
             max-width: 900px;
         }
 
-        .hero h2 {
-            font-size: 52px;
-            line-height: 1.15;
-            margin-bottom: 20px;
-            color: #0f172a;
+        .hero-label {
+            color: #0284c7;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
-        .hero h2 span {
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
             color: #0284c7;
         }
 
         .hero p {
-            font-size: 19px;
+            font-size: 20px;
             color: #475569;
-            max-width: 700px;
-            margin-bottom: 30px;
+            max-width: 720px;
+            margin-bottom: 32px;
         }
 
         .button {
             display: inline-block;
             background: #0284c7;
             color: white;
-            padding: 13px 24px;
-            border-radius: 6px;
             text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 6px;
             font-weight: bold;
+            margin-right: 10px;
         }
 
         .button:hover {
             background: #0369a1;
         }
 
+        .button-outline {
+            display: inline-block;
+            color: #0284c7;
+            text-decoration: none;
+            padding: 11px 23px;
+            border: 2px solid #0284c7;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .button-outline:hover {
+            background: #e0f2fe;
+        }
+
+        /* General Sections */
+
         section {
-            padding: 70px 8%;
+            padding: 80px 8%;
         }
 
         section h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
+            font-size: 34px;
             color: #0f172a;
+            margin-bottom: 20px;
         }
 
+        .section-intro {
+            color: #64748b;
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        /* About */
+
         .about {
+            background: #f1f5f9;
+        }
+
+        .about-text {
             max-width: 850px;
             color: #475569;
             font-size: 17px;
         }
 
+        /* Skills */
+
         .skills {
+            background: white;
+        }
+
+        .skill-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 25px;
+            gap: 14px;
+            max-width: 900px;
         }
 
         .skill {
             background: #e0f2fe;
             color: #0369a1;
-            padding: 9px 16px;
-            border-radius: 20px;
+            padding: 11px 18px;
+            border-radius: 25px;
             font-weight: bold;
             font-size: 14px;
         }
 
+        /* Projects */
+
+        .projects {
+            background: #f1f5f9;
+        }
+
         .project-card {
             background: white;
-            border-radius: 10px;
+            max-width: 1000px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .project-image {
+            width: 100%;
+            display: block;
+        }
+
+        .project-content {
             padding: 30px;
-            max-width: 900px;
-            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
         }
 
-        .project-card h3 {
-            font-size: 25px;
-            margin-bottom: 15px;
+        .project-content h3 {
+            font-size: 26px;
             color: #0f172a;
+            margin-bottom: 12px;
         }
 
-        .project-card p {
+        .project-content p {
             color: #475569;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
+            max-width: 800px;
         }
+
+        .project-tools {
+            margin-bottom: 25px;
+        }
+
+        .tool {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 6px 11px;
+            border-radius: 5px;
+            margin-right: 7px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Contact */
+
+        .contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact p {
+            color: #64748b;
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        /* Footer */
 
         footer {
             background: #0f172a;
-            color: white;
+            color: #cbd5e1;
             text-align: center;
-            padding: 30px;
-            margin-top: 30px;
+            padding: 30px 8%;
+            font-size: 14px;
         }
 
+        /* Mobile */
+
         @media (max-width: 700px) {
-            .hero h2 {
-                font-size: 38px;
-            }
 
             header {
                 flex-direction: column;
@@ -156,89 +257,221 @@
             nav a {
                 margin: 0 8px;
             }
+
+            .hero {
+                padding: 80px 8%;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .button,
+            .button-outline {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- Navigation -->
+
     <header>
-        <h1>Michael Adesanya</h1>
+        <div class="logo">Michael Adesanya</div>
 
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <main>
 
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Turning Data Into <span>Clear Decisions</span></h2>
+    <!-- Hero -->
 
-                <p>
-                    I am a Data Analyst focused on transforming complex datasets
-                    into clear, actionable insights using Excel, SQL, and Power BI.
-                </p>
+    <section class="hero">
 
-                <a class="button" href="#projects">
-                    View My Projects
-                </a>
+        <div class="hero-content">
+
+            <div class="hero-label">
+                DATA ANALYST
             </div>
-        </section>
 
-        <section id="about">
-            <h2>About Me</h2>
+            <h1>
+                Turning Data Into
+                <span>Clear Decisions.</span>
+            </h1>
 
-            <p class="about">
-                I am a Data Analyst with a background in Quality Control and
-                Operations. I combine analytical thinking with practical
-                business knowledge to turn raw data into reliable insights
-                that support better decision-making.
+            <p>
+                I transform complex datasets into reliable,
+                easy-to-understand insights that help businesses
+                make better decisions.
             </p>
-        </section>
 
-        <section id="skills">
-            <h2>Skills & Tools</h2>
+            <a class="button" href="#projects">
+                View My Projects
+            </a>
 
-            <div class="skills">
-                <span class="skill">Excel</span>
-                <span class="skill">Power Query</span>
-                <span class="skill">Power Pivot</span>
-                <span class="skill">SQL</span>
-                <span class="skill">Power BI</span>
-                <span class="skill">Data Visualization</span>
-                <span class="skill">Data Cleaning</span>
-                <span class="skill">Data Analysis</span>
-            </div>
-        </section>
+            <a class="button-outline"
+               href="https://github.com/Mikel44-N"
+               target="_blank">
+                GitHub
+            </a>
 
-        <section id="projects">
-            <h2>Featured Project</h2>
+        </div>
 
-            <div class="project-card">
-                <h3>Analyzing U.S. Electric Vehicle Market Share</h3>
+    </section>
+
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+
+        <p class="about-text">
+            I am a Data Analyst with a background in Quality Control
+            and Operations. I bridge the gap between complex datasets
+            and strategic business decisions by transforming raw,
+            messy data into reliable and easy-to-understand insights.
+
+            <br><br>
+
+            My approach combines data analysis with practical business
+            thinking, allowing me to investigate patterns, identify
+            meaningful insights, and communicate findings clearly
+            to decision-makers.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section class="skills" id="skills">
+
+        <h2>Skills & Tools</h2>
+
+        <p class="section-intro">
+            Tools and analytical skills I use to clean, analyze,
+            visualize, and communicate data.
+        </p>
+
+        <div class="skill-grid">
+
+            <span class="skill">Excel</span>
+            <span class="skill">Power Query</span>
+            <span class="skill">Power Pivot</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">Data Cleaning</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Data Visualization</span>
+            <span class="skill">Dashboard Development</span>
+            <span class="skill">Business Intelligence</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section class="projects" id="projects">
+
+        <h2>Featured Project</h2>
+
+        <p class="section-intro">
+            A selection of data analytics projects demonstrating
+            my approach to analysis, visualization, and
+            decision support.
+        </p>
+
+
+        <div class="project-card">
+
+            <img
+                src="https://raw.githubusercontent.com/Mikel44-N/US-EV-Market-Analysis/main/images/dashboard_overview.png"
+                alt="U.S. Electric Vehicle Market Overview Dashboard"
+                class="project-image"
+            >
+
+            <div class="project-content">
+
+                <h3>
+                    Analyzing U.S. Electric Vehicle Market Share
+                </h3>
 
                 <p>
-                    An analysis of U.S. vehicle registration data examining
-                    EV adoption, fuel-market composition, and differences
-                    across states.
+                    An analysis of U.S. vehicle registration data
+                    examining EV adoption, fuel-market composition,
+                    state-level differences, and policy implications.
                 </p>
 
-                <a class="button"
-                   href="https://github.com/Mikel44-N/US-EV-Market-Analysis"
-                   target="_blank">
-                    View Project
-                </a>
-            </div>
-        </section>
+                <div class="project-tools">
 
-    </main>
+                    <span class="tool">Excel</span>
+                    <span class="tool">SQL</span>
+                    <span class="tool">Power BI</span>
+
+                </div>
+
+                <a
+                    class="button"
+                    href="https://github.com/Mikel44-N/US-EV-Market-Analysis"
+                    target="_blank">
+                    View on GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Interested in discussing data, analytics, or
+            potential opportunities? Feel free to connect with me.
+        </p>
+
+        <a
+            class="button"
+            href="https://www.linkedin.com/"
+            target="_blank">
+            LinkedIn
+        </a>
+
+        <a
+            class="button-outline"
+            href="mailto:your-email@example.com">
+            Email Me
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
 
     <footer>
-        <p>© 2026 Michael Adesanya. Data Analyst Portfolio.</p>
+
+        <p>
+            © 2026 Michael Adesanya. Data Analyst Portfolio.
+        </p>
+
     </footer>
 
 </body>
