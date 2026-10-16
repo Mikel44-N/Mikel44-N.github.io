@@ -1,1 +1,459 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated U.S. EV Registration Workflow | Michael Adesanya</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #1f2937;
+            background: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            background: white;
+            padding: 90px 8%;
+        }
+
+        .hero-content,
+        .content {
+            max-width: 950px;
+        }
+
+        .hero-label {
+            color: #0284c7;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #475569;
+            max-width: 800px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .section-intro {
+            color: #64748b;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .content p {
+            color: #475569;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .overview {
+            background: #f1f5f9;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+        }
+
+        .detail-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .detail-card h3 {
+            color: #0284c7;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .detail-card p {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .workflow {
+            background: white;
+        }
+
+        .workflow-list,
+        .finding-list {
+            max-width: 950px;
+            padding-left: 25px;
+        }
+
+        .workflow-list li,
+        .finding-list li {
+            margin-bottom: 18px;
+            color: #475569;
+            font-size: 17px;
+        }
+
+        .results {
+            background: #f1f5f9;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 950px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .result-card strong {
+            display: block;
+            font-size: 30px;
+            color: #0284c7;
+            margin-bottom: 8px;
+        }
+
+        .result-card p {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .lessons {
+            background: white;
+        }
+
+        .tools {
+            background: #f1f5f9;
+        }
+
+        .tool {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 9px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .repository {
+            background: white;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px 10px 0 0;
+        }
+
+        .button:hover {
+            background: #0369a1;
+        }
+
+        .button-outline {
+            display: inline-block;
+            color: #0284c7;
+            text-decoration: none;
+            padding: 11px 23px;
+            border: 2px solid #0284c7;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px 8%;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 70px 8%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .detail-grid,
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Michael Adesanya</div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#repository">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-label">DATA ANALYTICS & AUTOMATION PROJECT</div>
+
+                <h1>Automated U.S. EV Registration Data Processing Workflow</h1>
+
+                <p>
+                    An end-to-end workflow that automates the retrieval,
+                    cleaning, validation, processing, and analysis of U.S.
+                    electric vehicle registration data, with outputs prepared
+                    for Power BI reporting.
+                </p>
+            </div>
+        </section>
+
+        <section class="overview">
+            <h2>Project Overview</h2>
+
+            <p class="section-intro">
+                The objective was to connect data processing and reporting
+                tasks into a repeatable workflow while introducing validation
+                safeguards before production data is refreshed.
+            </p>
+
+            <div class="detail-grid">
+
+                <div class="detail-card">
+                    <h3>Input</h3>
+                    <p>EV registration CSV attachment retrieved from Outlook.</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Processing</h3>
+                    <p>Python data cleaning, MySQL staging, validation, and SQL analysis.</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Reporting</h3>
+                    <p>Ten analytical CSV outputs prepared for Power BI reporting.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="workflow" id="workflow">
+            <h2>How the Workflow Works</h2>
+
+            <p class="section-intro">
+                The workflow connects desktop automation, Python processing,
+                database operations, SQL analysis, and reporting.
+            </p>
+
+            <ol class="workflow-list">
+                <li>
+                    <strong>Retrieve the source file:</strong>
+                    Power Automate Desktop retrieves the CSV attachment from Outlook.
+                </li>
+                <li>
+                    <strong>Clean and validate:</strong>
+                    Python processes the incoming data and checks that it meets
+                    the expected data requirements.
+                </li>
+                <li>
+                    <strong>Load to staging:</strong>
+                    The cleaned records are loaded into a MySQL staging table.
+                </li>
+                <li>
+                    <strong>Protect the production refresh:</strong>
+                    Validation checks determine whether the staged data can
+                    proceed to the production-table refresh.
+                </li>
+                <li>
+                    <strong>Run SQL analysis:</strong>
+                    SQL queries generate analytical results from the processed data.
+                </li>
+                <li>
+                    <strong>Prepare reporting outputs:</strong>
+                    Ten CSV result files are exported for use in Power BI.
+                </li>
+            </ol>
+        </section>
+
+        <section class="results">
+            <h2>Test Results</h2>
+
+            <p class="section-intro">
+                The workflow was tested using the U.S. EV registration dataset.
+            </p>
+
+            <div class="result-grid">
+                <div class="result-card">
+                    <strong>51</strong>
+                    <p>State and District of Columbia records processed.</p>
+                </div>
+
+                <div class="result-card">
+                    <strong>3.56M</strong>
+                    <p>Registered EVs represented in the dataset.</p>
+                </div>
+
+                <div class="result-card">
+                    <strong>10</strong>
+                    <p>Analytical CSV outputs generated.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lessons">
+            <h2>Challenges & Lessons Learned</h2>
+
+            <ul class="finding-list">
+                <li>
+                    <strong>Database configuration:</strong>
+                    Correct credential and connection settings are essential
+                    for reliable database operations.
+                </li>
+                <li>
+                    <strong>Debugging:</strong>
+                    Making execution results and error messages visible helps
+                    identify configuration and runtime problems.
+                </li>
+                <li>
+                    <strong>Data validation:</strong>
+                    Automated workflows need checks to detect invalid data
+                    before it reaches downstream reporting.
+                </li>
+                <li>
+                    <strong>Controlled updates:</strong>
+                    Production data should only be refreshed when the required
+                    validation checks pass.
+                </li>
+            </ul>
+        </section>
+
+        <section class="tools">
+            <h2>Tools & Technologies</h2>
+
+            <p class="section-intro">
+                Each tool contributes to a different stage of the workflow.
+            </p>
+
+            <span class="tool">Power Automate Desktop</span>
+            <span class="tool">Python</span>
+            <span class="tool">MySQL</span>
+            <span class="tool">SQL</span>
+            <span class="tool">Power BI</span>
+            <span class="tool">Outlook</span>
+            <span class="tool">Data Cleaning</span>
+            <span class="tool">Data Validation</span>
+            <span class="tool">Workflow Automation</span>
+        </section>
+
+        <section class="repository" id="repository">
+            <h2>Project Repository</h2>
+
+            <p class="section-intro">
+                Explore the project repository for the implementation details,
+                Python scripts, SQL files, sample outputs, and documentation.
+            </p>
+
+            <a
+                class="button"
+                href="https://github.com/Mikel44-N/automated-us-ev-registration-workflow"
+                target="_blank"
+                rel="noopener noreferrer">
+                View Project on GitHub
+            </a>
+
+            <a class="button-outline" href="../index.html#projects">
+                Back to Portfolio
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Michael Adesanya. Data Analyst Portfolio.</p>
+    </footer>
+
+</body>
+</html>
+
